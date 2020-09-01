@@ -1,18 +1,16 @@
 Bolded need reviewing
 Italics have already been confirmed by Ed.
 
+## Services: (X)
 
-## Services:
 
-Finished
-
-## Network Configuration:
+## Network Configuration: (X)
 
 *Ensure secure ICMP redirects are not accepted - NA for FreeBSD* 
 
-Ensure bogus ICMP responses are ignored - NA for FreeBSD
+*Ensure bogus ICMP responses are ignored - NA for FreeBSD*
 
-Ensure Reverse Path Filtering is enabled - NA for freebsd
+*Ensure Reverse Path Filtering is enabled - NA for freebsd*
 
 *Ensure DCCP is disabled - NA for FreeBSD*
 
