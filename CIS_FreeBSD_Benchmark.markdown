@@ -2509,7 +2509,7 @@ If a users recorded password change date is in the future then they could bypass
 
 #### Audit:
 Run the following command and verify each user's password expirory date:
-<pre><code># pw usershow -P -a
+<pre><code># pw usershow -P -a</code></pre>
 
 #### Remediation:
 Investigate any users with a password change date in the future and correct them. Locking the account, expiring the password, or resetting the password manually may be appropriate.
