@@ -14,7 +14,6 @@ Italics have already been confirmed by Ed.
 
 *Ensure DCCP is disabled - NA for FreeBSD*
 
-3.4.2.2 Ensure iptables is not enabled - NA for FreeBSD
 
 
 ## Auditing and Logging.
@@ -44,11 +43,11 @@ Italics have already been confirmed by Ed.
 4.2.2 Configure Journald - Systemd-journald looks to be Linux only so I skipped this section
 
 
-## Cron/Perodic:
+## Cron/Perodic: (X)
 
 Finished
 
-## SSH
+## SSH (X)
 
 *5.2.20 Ensure system-wide crypto policy is not over-ridden - N/A for FreeBSD*
 
