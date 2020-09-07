@@ -2546,7 +2546,7 @@ polkit:*:562:562::0:0:PolicyKit User:/nonexistent:/usr/sbin/nologin
 haldaemon:*:560:560::0:0:HAL Daemon User:/nonexistent:/usr/sbin/nologin
 webcamd:*:145:145::0:0:Webcamd user:/var/empty:/usr/sbin/nologin</code></pre>
 
-The <code>*</code> in the 2nd field is the disabled password, and note that they are all nologin shell.
+The <code>*</code> symbol in the 2nd field is the disabled password, and note that they are all nologin shell.
 
 #### Remediation:
 Set the shell for any accounts returned by the audit to nologin:
