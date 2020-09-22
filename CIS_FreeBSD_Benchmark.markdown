@@ -3405,7 +3405,40 @@ Version 7
 Maintain documented, standard security configuration standards for all authorized
 operating systems and software.
 
+## 6.2.7 Ensure users' home directories permissions are 750 or more restrictive
 
+#### Profile Applicability:
+* Level 1 - Server
+* Level 1 - Workstation
+
+#### Description:
+While the system administrator can establish secure permissions for users' home
+directories, the users can easily override these.
+
+#### Rationale:
+Group or world-writable user home directories may enable malicious users to steal or
+modify other users' data or to gain another user's system privileges.
+
+#### Audit:
+Run the following command an ensure that the correct restrictions are in place for each users' home directory:
+
+<pre><code># ls -l /usr/home/</code></pre>
+
+
+#### Remediation:
+If the permissions are not 750 or more restrictive for a users' home directory, use the following command:
+
+<pre><code># chmod 750 /usr/home/[user]</code></pre>
+
+#### CIS Controls:
+Version 7
+
+14.6 Protect Information through Access Control Lists
+
+Protect all information stored on systems with file system, network share, claims,
+application, or database specific access control lists. These controls will enforce the
+principle that only authorized individuals should have access to the information based on
+their need to access the information as a part of their responsibilities.
 
 
 
