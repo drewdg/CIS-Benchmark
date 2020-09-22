@@ -3535,6 +3535,40 @@ in unexpected outages and unhappy users. Therefore, it is recommended that a mon
 policy be established to report user <code>.forward</code> files and determine the action to be taken in
 accordance with site policy.
 
+#### CIS Controls:
+
+Version 7
+
+14.6 Protect Information through Access Control Lists
+
+Protect all information stored on systems with file system, network share, claims,
+application, or database specific access control lists. These controls will enforce the
+principle that only authorized individuals should have access to the information based on
+their need to access the information as a part of their responsibilities.
+
+## 6.2.11 Ensure no users have .netrc files 
+
+#### Profile Applicability:
+* Level 1 - Server
+* Level 1 - Workstation
+
+#### Description:
+The <code>.netrc</code> file specifies an email address to forward the user's mail to.
+
+#### Rationale:
+Use of the <code>.netrc</code> file poses a security risk in that sensitive data may be inadvertently
+transferred outside the organization. The <code>.netrc</code> file also poses a risk as it can be used to
+execute commands that may perform unintended actions.
+
+#### Audit:
+Run the following command for each users' home directory and ensure there are no <code>.netrc</code> files returned
+<pre><code># ls -l -a /usr/home/[user]</code></pre>
+
+#### Remediation:
+Making global modifications to users' files without alerting the user community can result
+in unexpected outages and unhappy users. Therefore, it is recommended that a monitoring
+policy be established to report user <code>.netrc</code> files and determine the action to be taken in
+accordance with site policy.
 
 #### CIS Controls:
 
@@ -3548,7 +3582,7 @@ principle that only authorized individuals should have access to the information
 their need to access the information as a part of their responsibilities.
 
 
-## 6.2.13 Ensure no users have .rhosts files
+## 6.2.12 Ensure no users have .rhosts files
 
 #### Profile Applicability:
 * Level 1 - Server
@@ -3589,7 +3623,7 @@ Version 7
 
 Encrypt or hash with a salt all authentication credentials when stored.
 
-## 6.2.14 Ensure all groups in /etc/passwd exist in /etc/group
+## 6.2.13 Ensure all groups in /etc/passwd exist in /etc/group
 
 #### Profile Applicability:
 * Level 1 - Server
@@ -3622,7 +3656,7 @@ Version 7
 Account Monitoring and Control
 
 
-## 6.2.15 Ensure no duplicate UIDs exist
+## 6.2.14 Ensure no duplicate UIDs exist
 
 #### Profile Applicability:
 * Level 1 - Server
@@ -3660,7 +3694,7 @@ Version 7
 
 Account Monitoring and Control
 
-## 6.2.16 Ensure no duplicate GIDs exist
+## 6.2.15 Ensure no duplicate GIDs exist
 
 #### Profile Applicability:
 * Level 1 - Server
@@ -3694,7 +3728,7 @@ Version 7
 
 Account Monitoring and Control
 
-## 6.2.17 Ensure no duplicate user names exist
+## 6.2.16 Ensure no duplicate user names exist
 
 #### Profile Applicability:
 * Level 1 - Server
@@ -3728,7 +3762,7 @@ Version 7
 
 Account Monitoring and Control
 
-## 6.2.18 Ensure no duplicate group names exist
+## 6.2.17 Ensure no duplicate group names exist
 
 #### Profile Applicability:
 * Level 1 - Server
@@ -3763,7 +3797,7 @@ Version 7
 
 Account Monitoring and Control
 
-## 6.2.19 Ensure all users' home directories exist
+## 6.2.18 Ensure all users' home directories exist
 
 #### Profile Applicability:
 * Level 1 - Server
