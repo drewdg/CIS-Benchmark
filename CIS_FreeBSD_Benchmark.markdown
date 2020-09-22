@@ -3440,7 +3440,77 @@ application, or database specific access control lists. These controls will enfo
 principle that only authorized individuals should have access to the information based on
 their need to access the information as a part of their responsibilities.
 
+## 6.2.8  Ensure users own their home directories
 
+#### Profile Applicability:
+* Level 1 - Server
+* Level 1 - Workstation
+
+#### Description:
+The user home directory is space defined for the particular user to set local environment
+variables and to store personal files.
+
+#### Rationale:
+Since the user is accountable for files stored in the user home directory, the user must be
+the owner of the directory.
+
+
+#### Audit:
+Run the following command an ensure that the each user owns their home directory:
+
+<pre><code># ls -l /usr/home/</code></pre>
+
+
+#### Remediation:
+To change the owner, run the following command:
+
+<pre><code># chmod [user] /usr/home/[user]</code></pre>
+
+#### CIS Controls:
+Version 7
+
+14.6 Protect Information through Access Control Lists
+
+Protect all information stored on systems with file system, network share, claims,
+application, or database specific access control lists. These controls will enforce the
+principle that only authorized individuals should have access to the information based on
+their need to access the information as a part of their responsibilities.
+
+## 6.2.9 Ensure users' dot files are not group or world writable
+
+#### Profile Applicability:
+* Level 1 - Server
+* Level 1 - Workstation
+
+#### Description:
+While the system administrator can establish secure permissions for users' "dot" files, the
+users can easily override these.
+
+#### Rationale:
+Group or world-writable user configuration files may enable malicious users to steal or
+modify other users' data or to gain another user's system privileges.
+
+#### Audit:
+Run the following command for each users' home directory and ensure none of the "dot" files are group or world writable
+<pre><code># ls -l -a /usr/home/[user]</code></pre>
+
+#### Remediation:
+Making global modifications to users' files without alerting the user community can result
+in unexpected outages and unhappy users. Therefore, it is recommended that a monitoring
+policy be established to report user dot file permissions and determine the action to be
+taken in accordance with site policy.
+
+
+#### CIS Controls:
+
+Version 7
+
+14.6 Protect Information through Access Control Lists
+
+Protect all information stored on systems with file system, network share, claims,
+application, or database specific access control lists. These controls will enforce the
+principle that only authorized individuals should have access to the information based on
+their need to access the information as a part of their responsibilities.
 
 
 ## 6.2.13 Ensure no users have .rhosts files
