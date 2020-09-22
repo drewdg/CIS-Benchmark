@@ -3424,7 +3424,6 @@ Run the following command an ensure that the correct restrictions are in place f
 
 <pre><code># ls -l /usr/home/</code></pre>
 
-
 #### Remediation:
 If the permissions are not 750 or more restrictive for a users' home directory, use the following command:
 
@@ -3499,6 +3498,42 @@ Making global modifications to users' files without alerting the user community 
 in unexpected outages and unhappy users. Therefore, it is recommended that a monitoring
 policy be established to report user dot file permissions and determine the action to be
 taken in accordance with site policy.
+
+
+#### CIS Controls:
+
+Version 7
+
+14.6 Protect Information through Access Control Lists
+
+Protect all information stored on systems with file system, network share, claims,
+application, or database specific access control lists. These controls will enforce the
+principle that only authorized individuals should have access to the information based on
+their need to access the information as a part of their responsibilities.
+
+## 6.2.10 Ensure no users have .forward files 
+
+#### Profile Applicability:
+* Level 1 - Server
+* Level 1 - Workstation
+
+#### Description:
+The <code>.forward</code> file specifies an email address to forward the user's mail to.
+
+#### Rationale:
+Use of the <code>.forward</code> file poses a security risk in that sensitive data may be inadvertently
+transferred outside the organization. The <code>.forward</code> file also poses a risk as it can be used to
+execute commands that may perform unintended actions.
+
+#### Audit:
+Run the following command for each users' home directory and ensure there are no .forward files returned
+<pre><code># ls -l -a /usr/home/[user]</code></pre>
+
+#### Remediation:
+Making global modifications to users' files without alerting the user community can result
+in unexpected outages and unhappy users. Therefore, it is recommended that a monitoring
+policy be established to report user <code>.forward</code> files and determine the action to be taken in
+accordance with site policy.
 
 
 #### CIS Controls:
